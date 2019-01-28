@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">demonio</string>
+    <string name="app_name">車載IoTシステム</string>
+
+    <string name="bluetooth_is_not_supported">Bluetooth is not supported.</string>
+    <string name="bluetooth_is_not_working">Bluetooth is not working.</string>
+    <string name="on_label">ON</string>
+    <string name="off_label">OFF</string>
+    <string name="text1">Connect</string>
+    <string name="start">START</string>
+    <string name="stop">STOP</string>
+    <string name="stop2">停止しました</string>
+    <string name="menu">設定</string>
+    <string name="config_text">ユーザ名とパスワードを設定</string>
+    <string name="hint">ユーザ名を入力してください</string>
+    <string name="hint2">パスワードを入力してください</string>
+    <string name="config">保存</string>
+    <string name="storage">ユーザ情報を保存しました</string>
+    <string name="post_result">ユーザ名もしくパスワードが違います</string>
+    <string name="true_result">OK</string>
 </resources>

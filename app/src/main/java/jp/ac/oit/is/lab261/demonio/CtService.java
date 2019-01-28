@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 
-public class ControlService extends Service {
+public class CtService extends Service {
     private static boolean a=false;
     @Override
     public void onCreate(){

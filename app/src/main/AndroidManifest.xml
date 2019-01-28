@@ -3,6 +3,11 @@
     package="jp.ac.oit.is.lab261.demonio">
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <service android:name=".ControlService" />
+        <service android:name=".CtService" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -19,8 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <service android:name=".TestService" />
+        <activity android:name=".MySharedPreferences" />
+        <service android:name=".NotiService" />
 
         <receiver
             android:name=".MyReceiver">
@@ -29,5 +34,6 @@
             </intent-filter>
         </receiver>
     </application>
+
 
 </manifest>

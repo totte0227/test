@@ -8,27 +8,27 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
 
-public class TestService extends Service {
+public class NotiService extends Service {
     NotificationManager mNM;
     @Override
     public void onCreate()
     {
-        Log.d("TestService", "onCreate()");
+        Log.d("NotiService", "onCreate()");
         mNM = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
         showNotification();
     }
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.d("TestService", "onStartCommand");
+        Log.d("NotiService", "onStartCommand");
         super.onStartCommand(intent, flags, startId);
         return super.onStartCommand(intent, flags, startId);
     }
 
     @Override
     public void onDestroy() {
-        Log.d("TestService", "onDestroy");
+        Log.d("NotiService", "onDestroy");
         super.onDestroy();
-        startService(new Intent(this, TestService.class));
+        startService(new Intent(this, NotiService.class));
     }
 
     @Override
@@ -36,18 +36,18 @@ public class TestService extends Service {
         return null;
     }
     private void showNotification() {
-        Log.d("TestService", "showNotification");
+        Log.d("NotiService", "showNotification");
         PendingIntent contentIntent = PendingIntent.getActivity(
                 this, 0,
                 new Intent(this, MainActivity.class), 0);
 
         Notification notif= new Notification.Builder(this)
                 .setContentTitle(getString(R.string.app_name))
-                .setContentText("テスト")
+                .setContentText("タップしてアプリを開く")
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentIntent(contentIntent)
                 .build();
-        //常駐させる
+
         notif.flags = Notification.FLAG_ONGOING_EVENT;
         mNM.notify(1, notif);
     }

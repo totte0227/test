@@ -13,7 +13,7 @@ public class MyReceiver extends BroadcastReceiver {
         //端末起動時にサービスを起動する
         Log.d("MyReceiver", "onReceive");
         if(Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())){
-            context.startService(new Intent(context, TestService.class));
+            context.startService(new Intent(context, NotiService.class));
         }
     }
 }
